@@ -18,23 +18,23 @@ export default function App() {
 
       <View style={styles.stories}>
         <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('./assets/imagens/gatinho.jpg')}/>
-          <Text> miau </Text>
+          <Image style={styles.imgstory} source={require('./assets/imagens/milena.png')}/>
+          <Text> milena </Text>
         </View>
         <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('./assets/imagens/gatinho.jpg')}/>
-          <Text> miau </Text>
+          <Image style={styles.imgstory} source={require('./assets/imagens/cassandra1.png')}/>
+          <Text> cassandra </Text>
         </View>
         <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('./assets/imagens/gatinho.jpg')}/>
-          <Text> miau </Text>
+          <Image style={styles.imgstory} source={require('./assets/imagens/mike.png')}/>
+          <Text> mike </Text>
         </View>
         <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('./assets/imagens/gatinho.jpg')}/>
-          <Text> miauauau </Text>
+          <Image style={styles.imgstory} source={require('./assets/imagens/alfredo.png')}/>
+          <Text> alfredo </Text>
         </View>
         <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('./assets/imagens/gatinho.jpg')}/>
+          <Image style={styles.imgstory} source={require('./assets/imagens/roberto.png')}/>
           <Text> miauauau </Text>
         </View>
       </View>
@@ -42,12 +42,12 @@ export default function App() {
         <View style={styles.post}>
           <View style={styles.postheader}>
             <View style={styles.postheaderesquerda}>
-              <Image style={styles.postheaderimg} source={require('./assets/imagens/gatinho.jpg')}/>
-              <Text>Miau</Text>
+              <Image style={styles.postheaderimg} source={require('./assets/imagens/alfredo.png')}/>
+              <Text style={styles.postheaderusername}>alfredo</Text>
             </View>
-            <FontAwesome5 name="ellipsis-h" size={18} color="black"/>
+            <FontAwesome5 name="ellipsis-v" size={16} color="black"/>
           </View>
-          <Image style={styles.postimg} aspectRatio={813/502} source={require('./assets/imagens/gatinho.jpg')}/>
+          <Image style={styles.postimg} aspectRatio={813/502} source={require('./assets/imagens/alfredo_e_humana.png')}/>
           <View style={styles.footer}>
             <View style={styles.footerleft}>
               <FontAwesome5 name="heart" size={24} color="black"/>
@@ -59,12 +59,12 @@ export default function App() {
         <View style={styles.post}>
           <View style={styles.postheader}>
             <View style={styles.postheaderesquerda}>
-              <Image style={styles.postheaderimg} source={require('./assets/imagens/gatinho.jpg')}/>
-              <Text>Miau</Text>
+              <Image style={styles.postheaderimg} source={require('./assets/imagens/cassandra1.png')}/>
+              <Text style={styles.postheaderusername}>cassandra</Text>
             </View>
-            <FontAwesome5 name="ellipsis-h" size={18} color="black"/>
+            <FontAwesome5 name="ellipsis-v" size={16} color="black"/>
           </View>
-          <Image style={styles.postimg} aspectRatio={813/502} source={require('./assets/imagens/gatinho.jpg')}/>
+          <Image style={styles.postimg} aspectRatio={813/502} source={require('./assets/imagens/cassandra.png')}/>
           <View style={styles.footer}>
             <View style={styles.footerleft}>
               <FontAwesome5 name="heart" size={24} color="black"/>
@@ -163,5 +163,8 @@ const styles = StyleSheet.create({
     width: '35%',
     backgroundColor: 'white',
     justifyContent: 'space-between',
+  },
+  postheaderusername:{
+    fontWeight: "bold",
   }
 });
