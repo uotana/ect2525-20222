@@ -1,28 +1,48 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 
 export default function Stories() {
+
+  const stories = [
+    {
+      id: 1,
+      nome: 'milena',
+      src: require('../assets/imagens/milena.png'),
+    },
+    {
+      id: 2,
+      nome: 'cassandra',
+      src: require('../assets/imagens/cassandra1.png'),
+    },{
+      id: 1,
+      nome: 'mike',
+      src: require('../assets/imagens/mike.png'),
+    },{
+      id: 1,
+      nome: 'alfredo',
+      src: require('../assets/imagens/alfredo.png'),
+    },{
+      id: 1,
+      nome: 'roberto',
+      src: require('../assets/imagens/roberto.png'),
+    },
+  ];
+
+  function renderItem({item}){
+    return <View style={styles.story}>
+    <Image style={styles.imgstory} source={item.src}/>
+    <Text> {item.nome} </Text>
+  </View>
+  }
+
   return (
       <View style={styles.stories}>
-        <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('../assets/imagens/milena.png')}/>
-          <Text> milena </Text>
-        </View>
-        <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('../assets/imagens/cassandra1.png')}/>
-          <Text> cassandra </Text>
-        </View>
-        <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('../assets/imagens/mike.png')}/>
-          <Text> mike </Text>
-        </View>
-        <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('../assets/imagens/alfredo.png')}/>
-          <Text> alfredo </Text>
-        </View>
-        <View style={styles.story}>
-          <Image style={styles.imgstory} source={require('../assets/imagens/roberto.png')}/>
-          <Text> miauauau </Text>
-        </View>
+        <FlatList
+          data={stories}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
       </View>
   );
 }
