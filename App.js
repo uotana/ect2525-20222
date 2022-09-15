@@ -2,20 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import Constants from 'expo-constants';
 import {FontAwesome5} from '@expo/vector-icons';
+import Header from './components/Header';
+
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-
-      <View style={styles.header}>
-        <Image style={styles.ufrngram} source={require('./assets/imagens/ufrngram.png')}/>
-        <View style={styles.headerright}>
-          <FontAwesome5 name="plus-square" size={24} color="black"/>
-          <FontAwesome5 name="heart" size={24} color="black"/>
-          <FontAwesome5 name="paper-plane" size={24} color="black"/>
-        </View>
-      </View>
-
+      <Header/>
       <View style={styles.stories}>
         <View style={styles.story}>
           <Image style={styles.imgstory} source={require('./assets/imagens/milena.png')}/>
