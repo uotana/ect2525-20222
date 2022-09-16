@@ -16,7 +16,7 @@ export default function Feed(){
         nome: "cassandra",
         srcImgPerfil:require('../assets/imagens/cassandra1.png') ,
         srcImgPost: require('../assets/imagens/cassandra.png'),
-        aspectRatio: 813/502
+        aspectRatio: 505/435
       },
     ];
 
@@ -29,7 +29,7 @@ export default function Feed(){
           </View>
           <FontAwesome5 name="ellipsis-v" size={16} color="black"/>
       </View>
-      <Image style={styles.postimg} aspectRatio={813/502} source={item.srcImgPost}/>
+      <Image style={styles.postimg} aspectRatio={item.aspectRatio} source={item.srcImgPost}/>
       <View style={styles.footer}>
           <View style={styles.footerleft}>
             <FontAwesome5 name="heart" size={24} color="black"/>
@@ -48,6 +48,7 @@ export default function Feed(){
         data={feed}
         renderItem = {renderItem}
         keyExtractor = {item => item.id}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   )
