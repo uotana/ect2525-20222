@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     postheaderesquerda:{
       flexDirection: 'row',
       alignItems: 'center',
-      //justifyContent: 'space-between'
     },
     postheaderimg:{
       borderRadius:35,
@@ -89,7 +88,6 @@ const styles = StyleSheet.create({
       padding: 10,
       height:50,
       alignItems: 'center',
-      //backgroundColor: 'pink',
       backgroundColor: 'white',
     },
     footerleft:{
