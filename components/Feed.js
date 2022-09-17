@@ -12,7 +12,7 @@ export default function Feed(){
         aspectRatio: 813/502
       },
       {
-        id: 1,
+        id: 2,
         nome: "cassandra",
         srcImgPerfil:require('../assets/imagens/cassandra1.png') ,
         srcImgPost: require('../assets/imagens/cassandra.png'),

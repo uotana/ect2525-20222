@@ -12,16 +12,19 @@ export default function Stories() {
       id: 2,
       nome: 'cassandra',
       src: require('../assets/imagens/cassandra1.png'),
-    },{
-      id: 1,
+    },
+    {
+      id: 3,
       nome: 'mike',
       src: require('../assets/imagens/mike.png'),
-    },{
-      id: 1,
+    },
+    {
+      id: 4,
       nome: 'alfredo',
       src: require('../assets/imagens/alfredo.png'),
-    },{
-      id: 1,
+    },
+    {
+      id: 5,
       nome: 'roberto',
       src: require('../assets/imagens/roberto.png'),
     },
