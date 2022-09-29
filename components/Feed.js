@@ -1,35 +1,30 @@
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 import {FontAwesome5} from '@expo/vector-icons';
 
 export default function Feed(){
 
-    const feed = [
-      {
-        id: 1,
-        nome: "alfredo",
-        srcImgPerfil:require('../assets/imagens/alfredo.png') ,
-        srcImgPost: require('../assets/imagens/alfredo_e_humana.png'),
-        aspectRatio: 813/502
-      },
-      {
-        id: 2,
-        nome: "cassandra",
-        srcImgPerfil:require('../assets/imagens/cassandra1.png') ,
-        srcImgPost: require('../assets/imagens/cassandra.png'),
-        aspectRatio: 505/435
-      },
-    ];
+  const [feed, setFeed] = useState([]);
+
+  useEffect(function(){
+    async function getData(){
+      const response = await fetch('https://mobile.ect.ufrn.br:3000/feed');
+      const feed = await response.json();
+      setFeed(feed);
+    }
+    getData();
+  },[]);
 
     function renderItem({item}){
       return <View style={styles.post}>
       <View style={styles.postheader}>
           <View style={styles.postheaderesquerda}>
-            <Image style={styles.postheaderimg} source={item.srcImgPerfil}/>
-            <Text style={styles.postheaderusername}>{item.nome}</Text>
+            <Image style={styles.postheaderimg} source={{ uri: item.imgPerfilUri}}/>
+            <Text style={styles.postheaderusername}>{item.nomeUsuario}</Text>
           </View>
           <FontAwesome5 name="ellipsis-v" size={16} color="black"/>
       </View>
-      <Image style={styles.postimg} aspectRatio={item.aspectRatio} source={item.srcImgPost}/>
+      <Image style={styles.postimg} aspectRatio={item.aspectRatio} source={{uri: item.imgPostUri}}/>
       <View style={styles.footer}>
           <View style={styles.footerleft}>
             <FontAwesome5 name="heart" size={24} color="black"/>
