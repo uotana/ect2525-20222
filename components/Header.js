@@ -1,14 +1,14 @@
 import { StyleSheet, View, Image } from 'react-native';
 import {FontAwesome5} from '@expo/vector-icons';
 
-export default function Header() {
+export default function Header({ navigation }) {
     return(
         <View style={styles.header}>
         <Image style={styles.ufrngram} source={require('../assets/imagens/ufrngram.png')}/>
         <View style={styles.headerright}>
           <FontAwesome5 name="plus-square" size={24} color="black"/>
           <FontAwesome5 name="heart" size={24} color="black"/>
-          <FontAwesome5 name="paper-plane" size={24} color="black"/>
+          <FontAwesome5 name="paper-plane" size={24} color="black" onPress={()=> navigation.navigate('ChatListScreen')}/>
         </View>
       </View>
     );
